@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dz4.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <Label 
+                Text="Перелік товарів" 
+                FontSize="24"
+                HorizontalOptions="Center" 
+                Margin="0,10,0,20" />
+
+            <!-- Таблиця з заголовками та даними -->
+            <Grid x:Name="ProductGrid"
+                  ColumnDefinitions="*, *, *, *, *, *, *, *, *, *"
+                  RowSpacing="10"
+                  ColumnSpacing="10">
+
+                <!-- Заголовки колонок -->
+                <Label Text="Назва" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" />
+                <Label Text="Ціна" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" />
+                <Label Text="Країна" FontAttributes="Bold" Grid.Row="0" Grid.Column="2" />
+                <Label Text="Опис" FontAttributes="Bold" Grid.Row="0" Grid.Column="3" />
+                <Label Text="Термін придатності" FontAttributes="Bold" Grid.Row="0" Grid.Column="4" />
+                <Label Text="К-ть" FontAttributes="Bold" Grid.Row="0" Grid.Column="5" />
+                <Label Text="Одиниця виміру" FontAttributes="Bold" Grid.Row="0" Grid.Column="6" />
+                <Label Text="Кількість сторінок" FontAttributes="Bold" Grid.Row="0" Grid.Column="7" />
+                <Label Text="Видавництво" FontAttributes="Bold" Grid.Row="0" Grid.Column="8" />
+                <Label Text="Перелік авторів" FontAttributes="Bold" Grid.Row="0" Grid.Column="9" />
+            </Grid>
+
+            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
+                <Button 
+                    Text="Додати товар" 
+                    Clicked="OnAddProductClicked" 
+                    BackgroundColor="#6200EE"
+                    TextColor="White"
+                    CornerRadius="10"
+                    WidthRequest="150" />
+                <Button 
+                    Text="Видалити товар" 
+                    Clicked="OnRemoveProductClicked" 
+                    BackgroundColor="#6200EE"
+                    TextColor="White"
+                    CornerRadius="10"
+                    WidthRequest="150" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
